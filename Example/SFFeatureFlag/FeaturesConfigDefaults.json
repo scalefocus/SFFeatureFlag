@@ -1,0 +1,10 @@
+[
+    {
+        "feature_name": "profile_details",
+        "is_enabled": true
+    },
+    {
+        "feature_name": "recommended_articles",
+        "is_enabled": false
+    }
+]
