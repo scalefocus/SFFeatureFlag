@@ -27,7 +27,7 @@ Note that ```FirebaseRemoteConfig``` is not added as a dependency of SFFeatureFl
 ## How it works
 SFFeatureFlag works by checking your project's RemoteConfig in Firebase for the existance of a specific parameter. This parameter is ```features_config``` and should be configured with a specific JSON value that will be used for evaluating if a certain feature is enabled. The JSON value should be in the following format:
 
-```
+```json
 [
   {
     "feature_name": "NAME_OF_THE_FEATURE",
@@ -82,7 +82,7 @@ You can set in-app default parameter values for the RemoteConfig object, so that
 FeatureFlagManager is a singleton class that is wrapper around the SFFeatureFlag implementation. The main goal is to have one global class that will be used everywhere within the project for determing the availability of features without importing the SFFeatureFlag module and of course using the same instance of the ```FeatureFlagCenter``` class.
 
 ### 4. Setup FeatureFlagManager in AppDelegate
-```
+```swift
 func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
     
     FeatureFlagManager.shared.setup()
@@ -94,12 +94,12 @@ This setup method creates an instance of the ```FeatureFlagCenter``` class and f
 
 ### 5. Check if a certain feature is enabled
 To check if a feature, that is associated with a certain name, is enabled call the following method:
-```
+```swift
 FeatureFlagManager.shared.isFeatureEnabled(featureType:)
 ```
 
 Optionally, you can pass a conditionsDataSource dictionary which will be used when evaluating the specific conditions defined in the features config. For example, if some feature is restricted to be available only to users with specific profession and that are from specific country, you can provide these user's information by:
-```
+```swift
 let conditionsDataSource = [
     "country": "usa",
     "profession": "singer"
