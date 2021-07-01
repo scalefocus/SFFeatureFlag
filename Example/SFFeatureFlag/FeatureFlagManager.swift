@@ -31,7 +31,9 @@ class FeatureFlagManager {
     }
     
     
-    /// Determines
+    /// Determines whether a feature associated with a certain key should be enabled
+    /// - Parameter featureKey: The key associated for that feature
+    /// - Parameter specificConditionsDataSource: Dictionary that will be used when evaluating the specific conditions defined in the features config
     func isFeatureEnabled(featureType: FeatureType, conditionsDataSource: [String: Any] = [:]) -> Bool {
         return featureFlagCenter.isFeatureEnabled(featureKey: featureType.rawValue, specificConditionsDataSource: conditionsDataSource)
     }

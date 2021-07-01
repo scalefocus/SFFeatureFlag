@@ -97,7 +97,7 @@ public class FeatureFlagCenter {
         
         //Check the specific conditions
         if let conditions = criteria.specificConditions, !conditions.isEmpty {
-            for condition in criteria.specificConditions ?? [] {
+            for condition in conditions {
                 if !isConditionSatisfied(condition, with: conditionsDataSource[condition.key]) {
                     return false
                 }
@@ -148,9 +148,9 @@ public class FeatureFlagCenter {
         let jsonDecoder = JSONDecoder()
         jsonDecoder.keyDecodingStrategy = featuresConfigDecodingStrategy
         
-        if let featuresConfigData = remoteConfigService.configValue(forKey: featuresConfigKey, type: Data.self) {
-            let featuresConfig = try? jsonDecoder.decode([FeatureConfig].self, from: featuresConfigData)
-            return featuresConfig ?? []
+        if let featuresConfigData = remoteConfigService.configValue(forKey: featuresConfigKey, type: Data.self),
+           let featuresConfig = try? jsonDecoder.decode([FeatureConfig].self, from: featuresConfigData) {
+            return featuresConfig
         }
         
         return []
