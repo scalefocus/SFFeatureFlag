@@ -1,6 +1,0 @@
-framework module SFFeatureFlag {
-  umbrella header "SFFeatureFlag-umbrella.h"
-
-  export *
-  module * { export * }
-}
