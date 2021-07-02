@@ -12,7 +12,7 @@ extension String {
     func toDate(format: String = "dd-MM-yyyy") -> Date? {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = format
-        dateFormatter.locale = Locale.current
+        dateFormatter.locale = .current
         
         return dateFormatter.date(from: self)
     }

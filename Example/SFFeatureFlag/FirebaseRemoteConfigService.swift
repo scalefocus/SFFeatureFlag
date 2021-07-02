@@ -41,7 +41,6 @@ class FirebaseRemoteConfigService: RemoteConfigServiceProtocol {
             } else {
                 completionHandler(false, error)
             }
-            
         })
     }
     
