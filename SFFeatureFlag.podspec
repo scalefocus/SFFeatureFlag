@@ -8,17 +8,11 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SFFeatureFlag'
-  s.version          = '0.1.0'
+  s.version          = '1.0.0'
   s.summary          = 'SFFeatureFlag provides mechanism for controlling the availability of features based on a remote configuration'
 
-# This description is used to generate tags and improve search results.
-#   * Think: What does it do? Why did you write it? What is the focus?
-#   * Try to keep it short, snappy and to the point.
-#   * Write the description between the DESC delimiters below.
-#   * Finally, don't worry about the indent, CocoaPods strips it!
-
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+SFFeatureFlag is a Scalefocus library that provides mechanism for controlling the availability of features based on a remote configuration, without requiring users to download an app update.
                        DESC
 
   s.homepage         = 'https://github.com/scalefocus/SFFeatureFlag'

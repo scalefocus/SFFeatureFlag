@@ -38,7 +38,7 @@ PODS:
   - nanopb/decode (2.30908.0)
   - nanopb/encode (2.30908.0)
   - PromisesObjC (1.2.12)
-  - SFFeatureFlag (0.1.0)
+  - SFFeatureFlag (1.0.0)
 
 DEPENDENCIES:
   - FirebaseRemoteConfig
@@ -70,7 +70,7 @@ SPEC CHECKSUMS:
   GoogleUtilities: f8a43108b38a68eebe8b3540e1f4f2d28843ce20
   nanopb: a0ba3315591a9ae0a16a309ee504766e90db0c96
   PromisesObjC: 3113f7f76903778cf4a0586bd1ab89329a0b7b97
-  SFFeatureFlag: a6b86e61e2035d1ca83a131113207285c71ed6e0
+  SFFeatureFlag: 8c33543974f144cf0a3fc85359a2ecebdb0dbcdf
 
 PODFILE CHECKSUM: 0086b122ed3e8de3b19577b9d40f9957c46ccde4
 
