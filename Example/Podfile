@@ -1,0 +1,10 @@
+use_frameworks!
+
+platform :ios, '11.0'
+
+target 'SFFeatureFlag_Example' do
+  pod 'SFFeatureFlag', :path => '../'
+  pod 'FirebaseRemoteConfig'
+  
+    
+end
